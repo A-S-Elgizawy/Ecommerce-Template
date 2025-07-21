@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+
+}
+
+:root{
+    --white-color:rgb(233, 233, 233);
+    /* --white-color:white; */
+    /* --black-color:rgb(14, 14, 14); */
+    --black-color:#1b1b1b;
+    --red-color:#cf1846;
+}
+html {
+  /* scroll-behavior: smooth; */
+  overflow-x: hidden;
+}
