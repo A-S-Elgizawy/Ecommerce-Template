@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "League Spartan", serif;
+    scroll-behavior: smooth;
+  }
+  Html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  :root {
+    --main-color: #008080;
+    --bg-color: #d1d1d1;
+    --bg2-color: #818181;
+    /* --second-bg-color: #dcfff7; */
+    --second2-bg-color: #cdfff2;
+    
+  }
+  body.dark-mode {
+    background-color: rgb(34, 31, 31);
+    color: white;
+  }
+  body.dark-mode .connection-home-shop {
+    background-color: #008080;
+    color: white;
+  }
+  /* body{
+    background-color: rgb(34, 31, 31);
+    color: white;
+  } */
+  /* body.dark-mode {
+    background-color: rgb(85, 63, 63);
+    color: white;
+  } */
+
+
+

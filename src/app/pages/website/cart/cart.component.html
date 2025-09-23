@@ -1,0 +1,107 @@
+<div class="connection-home-shop">
+    <p>
+      Home<span><i class="bx bx-chevron-right"></i></span>shop<span
+        ><i class="bx bx-chevron-right"></i
+      ></span>
+      Cart
+    </p>
+  </div>
+  <!-- end home >shop >img -->
+
+  <section class="cart-container">
+      <div class="cart-content">
+        <div class="sort-items">
+          <div class="sort">
+              <p class="image">Image</p>
+              <p class="Name">Name</p>
+              <p class="Price">Price</p>
+              <p class="quantity">quantity</p>
+              <p class="subtotal">subtotal</p>
+              <p class="remove">Remove</p>
+          </div>
+          <div class="items ">
+            <div class="sort item-data" *ngFor="let item of cartproducts">    
+              <div class="img-container image">
+                  <img [src]="item.productImageUrl">
+              </div>
+              <div class="Name content">
+                  <p class="name-item">{{item.productName}}</p>
+                   <p>data about this product</p> 
+              </div>
+              <p class="Price Price-number">${{item.productPrice}}</p>
+              <div class="input-container quantity">
+                <div class="spinner">
+                    <span class="btnqun minus" data-id="2721888517" ></span>
+                    <!-- <input type="text" id="updates_2721888517" name="quantity" value="1" class="quantity-selector"> -->
+                     <span class="quantity-selector">1</span>
+                    <input type="hidden" id="product_id" name="product_id" value="2721888517">
+                    <span class="q">Qty.</span>
+                    <span class="btnqun plus" data-id="2721888517" ></span>
+                  </div> 
+                  <!-- <div *ngFor="let item of cartproducts; let i = index">
+                    <input
+                      type="number"
+                      [(ngModel)]="item.quantity"
+                      (change)="updateAmount(i, item.quantity)"
+                      min="1"
+                    />
+                  </div> -->
+                </div>
+              <p class="subtotal subtotal-number">${{item.productPrice}}</p>
+              <div class="icon-container remove" (click)="removeFromcart(item)" >
+                  <i class='bx bx-trash'></i>
+              </div>
+          </div>     
+         <div class="empty">
+          <!-- <img src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png" alt=""> -->
+          <img src="https://aleointernational.com/img/empty-cart-yellow.png" alt="">
+         </div>
+        </div>
+    </div>
+          <div class="botton-container">
+            <div class="btn" (click)="updatecart()"><a ><i class='bx bx-git-compare'></i> Update cart</a></div>
+            <div class="btn" routerLink="/shop1"><a><i class="bx bx-shopping-bag"></i> continue Shopping</a></div>
+        </div>
+        <div class="finger-container">
+            <hr>
+        <div class="fingerprint">
+            <i class='bx bx-fingerprint' ></i>
+        </div>
+        </div>
+        <div class="calculate-cart">
+          <div class="calculate-content">
+            <div class="part one">
+                <div class="calculate1">
+            <h2>Calculate Shipping</h2>
+            <div class="input-container">
+                <input type="text" placeholder="State / Country">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="PortCode / ZiP">
+                <div class="btn"><a href=""><i class='bx bx-git-compare'></i> Update</a></div>
+            </div>
+          </div>
+           <div class="calculate2">
+            <h2>Calculate Shipping</h2>
+            <div class="input-apply">
+                <input type="text" placeholder="Enter Your coupon">
+                <div class="btn"><a href=""><i class='bx bx-git-compare'></i> Apply</a></div>
+            </div>
+           </div>
+        </div>
+        <div class="part two">
+            <h2>Cart Totals</h2>
+            <div class="some-data">
+                <p>Cart subtotal</p>
+                <p class="price cart-subtotal">${{total}}</p>
+                <p>Shipping</p>
+                <p class="price shipping">${{cartproducts.length * 5}}</p>
+                <p>Total</p>
+                <p class="price-total">${{total}}</p>
+            </div>
+            <div class="btn" routerLink="/checkout"><a ><i class='bx bx-git-compare'></i> Proceed To CheckOut</a></div>
+        </div>
+        </div>
+        </div> 
+      </div>
+  </section>
+

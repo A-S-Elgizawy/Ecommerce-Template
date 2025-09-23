@@ -1,0 +1,47 @@
+<div class="connection-home-shop">
+    <p>
+      Home<span><i class="bx bx-chevron-right"></i></span>shop<span
+        ><i class="bx bx-chevron-right"></i
+      ></span>
+      Wishlist
+    </p>
+  </div>
+  <!-- end home >shop >img -->
+
+  <section class="favorit-container">
+      <div class="favorit-content">
+        <div class="sort-items">
+          <div class="sort">
+              <p class="image">Image</p>
+              <p class="Name">Name</p>
+              <p class="Price">Price</p>
+              <p class="stock">Stock Status</p>
+              <p class="action">Action</p>
+              <p class="remove">Remove</p>
+          </div>
+          <div class="items">
+          <div class="sort item-data" *ngFor="let item of fevoritproducts"> 
+              <div class="img-container image">
+                  <img [src]="item.productImageUrl" alt="">
+              </div>
+              <div class="Name content">
+                  <p class="name-item">{{item.productName}}</p>
+                  <!-- <p>data about this product</p>
+                  <p>other data about this product</p> -->
+              </div>
+              <p class="Price Price-number">${{item.productPrice}}</p>
+              <p class="stock">in Stock</p>
+              <div class="action">
+              <div class="btn" (click)="toggleAddToCart(item)"><span> Add to Cart </span></div>
+              </div>
+              <div class="icon-container remove" (click)="removeFromFevorit(item)" >
+                  <i class='bx bx-trash'></i>
+              </div>
+          </div>  
+          <div class="empty">
+            <img src="https://static.oxinis.com/healthmug/image/healthmug/empty-wishlist.webp" alt="">
+           </div>
+      </div>
+    </div>
+      </div>
+  </section>

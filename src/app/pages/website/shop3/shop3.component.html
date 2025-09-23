@@ -1,0 +1,66 @@
+<div class="connection-home-shop">
+    <p>Home <span><i class='bx bx-chevron-right'></i></span>shop</p>
+</div>
+<section class="home-shop">
+    <div class="home-shop-content">
+        <p style="margin-bottom: 3rem;">We found <span>{{productList.length}}</span> items for you!</p>
+              <!-- loading  -->
+              <div class="loading-card" data-loader="1" *ngIf="loading">
+                <div class="card-content">
+                    <div class="loader-1">
+                        <div class="pulse-container">
+                            <div class="pulse-circle"></div>
+                            <div class="pulse-circle"></div>
+                            <div class="pulse-circle"></div>
+                        </div>
+                        <div class="loader-text">Loading Content</div>
+                    </div>
+                </div>
+            </div>
+            <!-- loading  -->
+        <div *ngIf="!loading" class="group">
+            <div class="item" *ngFor="let item of productList | filter: 'Shoes' :'categoryName'">
+              <div class="img-container">
+                  <div class="date" [ngClass]="{
+                    'bg-binck': item.productDescription === 'new',
+                    'bg-oran': item.productDescription === 'Best Sell',
+                    'bg-sky': item.productDescription === 'Sale',
+                    'bg-darkgreen': item.productDescription === 'Hot'
+                  }">{{item.productDescription}}</div>
+                  <img [src]="item.productImageUrl" alt="">
+                  <div class="icons">
+                  <a  class="veiw" data-text="show" (click)="openBroductDetail(item.productId)"><i class='bx bx-show'></i></a>
+                  <a class="favorite" [attr.data-text]="IsWishlist(item) ? 'Remove From Favorite' : 'Add To Favorite'"  (click)="togglewhilist(item)" [ngClass]="{'active':IsWishlist(item)}" ><i class='bx bx-heart'></i></a>
+                  </div>
+              </div>
+              <p>{{item.categoryName}}</p>
+              <h2>{{item.productName}}</h2>
+              <div class="star-price-cart-container">
+              <div class="stars-price">
+              <div class="stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+              </div>
+              <p class="price"><span class="number" style="padding-right: 5px;">${{item.productPrice}}.00</span> <span class="delete">$245.8</span></p>
+          </div>
+          <div class="cart" data-text="add to cart" (click)="toggleAddToCart(item)" [ngClass]="{'active':IsAddedToCart(item)}" [attr.data-text]="IsAddedToCart(item) ? 'Remove From Cart' : 'Add To Cart'" >
+              <i class='bx bx-shopping-bag'></i>
+          </div>
+          </div>
+          </div>
+      </div>
+        <div class="other-pages">
+            <a class="left" routerLink="/shop2"><i class='bx bx-chevrons-left'></i></a>
+            <a routerLink="/shop1" >01</a>
+            <a routerLink="/shop2">02</a>
+            <a routerLink="/shop3" class="active">03</a>
+            <a routerLink="/shop4">04</a>
+            <a routerLink="/shop5">05</a>
+            <a class="right" routerLink="/shop4"><i class='bx bx-chevrons-right'></i></a>
+        </div>
+    </div>
+</section>
+

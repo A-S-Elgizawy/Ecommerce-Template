@@ -1,0 +1,411 @@
+<!-- <section class="Home">
+
+    <div class="text-container">
+        <p>Hot promotions</p>
+        <h2>Fashion Trending</h2>
+        <h1>Great Collection</h1>
+        <p>Save more with coupons & up to 20% off</p>
+        <div class="btn" (click)="activateShop()" routerLink="/shop1"><a>Shop Now</a></div>
+    </div>
+    <div class="img-container">
+        <img src="https://firhan.com/wp-content/themes/hello-elementor/custom_assets/imgs/slider/slider-3.webp" alt="">
+    </div>
+    </section> -->
+
+    <!-- new swiper  -->
+     <section >
+    <main>
+        <div>
+          <span>Hot promotions</span>
+          <h2>Fashion Trending</h2>
+          <h1>Great Collection</h1>
+          <hr>
+          <p>Save more with coupons & up to 20% off.</p>
+          <a routerLink="/shop1">Shop Now</a>
+        </div>
+        <div class="swiper  swiper-Home">
+          <div class="swiper-wrapper swiper-wrapper-home">
+            <div class="swiper-slide swiper-slide   swiper-slide--one">
+              <!-- <div>
+                 <h2>Jellyfish</h2>
+                <p>Jellyfish and sea jellies are the informal common names given to the medusa-phase of certain gelatinous members of the subphylum Medusozoa, a major part of the phylum Cnidaria.</p>
+                <a href="https://en.wikipedia.org/wiki/Jellyfish" target="_blank">explore</a> 
+              </div> -->
+            </div>
+            <div class="swiper-slide swiper-slide swiper-slide--two">
+              <!-- <div>
+                <h2>Seahorse</h2>
+                <p>
+                  Seahorses are mainly found in shallow tropical and temperate salt water throughout the world. They live in sheltered areas such as seagrass beds, estuaries, coral reefs, and mangroves. Four species are found in Pacific waters from North America to South America.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Seahorse" target="_blank">explore</a>
+              </div> -->
+            </div>
+      
+            <div class="swiper-slide swiper-slide swiper-slide--three">
+      
+              <!-- <div>
+                <h2>octopus</h2>
+                <p>
+                  Octopuses inhabit various regions of the ocean, including coral reefs, pelagic waters, and the seabed; some live in the intertidal zone and others at abyssal depths. Most species grow quickly, mature early, and are short-lived.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Octopus" target="_blank">explore</a>
+              </div> -->
+            </div>
+      
+            <div class="swiper-slide swiper-slide swiper-slide--four">
+      
+              <!-- <div>
+                <h2>Shark</h2>
+                <p>
+                  Sharks are a group of elasmobranch fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Shark" target="_blank">explore</a>
+              </div> -->
+            </div>
+      
+            <div class="swiper-slide swiper-slide swiper-slide--five">
+      
+              <!-- <div>
+                <h2>Dolphin</h2>
+                <p>
+                  Dolphins are widespread. Most species prefer the warm waters of the tropic zones, but some, such as the right whale dolphin, prefer colder climates. Dolphins feed largely on fish and squid, but a few, such as the orca, feed on large mammals such as seals.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Dolphin" target="_blank">explore</a>
+              </div> -->
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <!-- <img src="https://cdn.pixabay.com/photo/2021/11/04/19/39/jellyfish-6769173_960_720.png" alt="" class="bg">
+        <img src="https://cdn.pixabay.com/photo/2012/04/13/13/57/scallop-32506_960_720.png" alt="" class="bg2"> -->
+      </main>
+    </section>
+    <!-- new swiper  -->
+    <div class="section-categories">
+    <div class="Popular-Categories">
+            <h2 class="heading"><span>Popular</span> Categories</h2>
+                <div class="options-box mutual swiper">
+                    <div class="options-content swiper-wrapper">
+                        <div class="options-slide swiper-slide active" (click)="filter('')">
+                            <a  class="img-container1" >
+                                <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fHByb2R1Y3RzfGVufDB8fDB8fHww" alt="">
+                            </a>
+                            <p class="p active">All Broducts</p>
+                        </div>
+                        <div class="options-slide swiper-slide " (click)="filter('Shirts')">
+                            <a  class="img-container1" >
+                                <img src="https://eu.fathersonsclothing.com/cdn/shop/files/5D7FBEB4-54F2-4718-A0EF-4A4C81A9C0B4_400x.jpg?v=1740159896" alt="">
+                            </a>
+                            <p class="p">Shirts</p>
+                        </div>
+                        <div class="options-slide swiper-slide watches" (click)="filter('T-Shirts')">
+                            <a  class="img-container1">
+                                <img  src="https://eu.fathersonsclothing.com/cdn/shop/files/5AEAAA5D-9092-4B2F-B86A-2099A6E6203B_800x.jpg?v=1741878000" alt="">
+                            </a>
+                            <p class="p">T-Shirts</p>
+                        </div>
+                        <div class="options-slide swiper-slide clothes" (click)="filter('Watch')">
+                            <a  class="img-container1">
+                                <img src="https://images.unsplash.com/photo-1659972325161-518bc57f14e8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHx3YXRjaGVzfGVufDB8fDB8fHww" alt="">
+                            </a>
+                            <p class="p">Watches</p>
+                        </div>
+                        <div class="options-slide swiper-slide suit" (click)="filter('Shoes')">
+                            <a  class="img-container1">
+                                <img src="https://images.unsplash.com/photo-1518894781321-630e638d0742?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjk0fHxTaG9lc3xlbnwwfHwwfHx8MA%3D%3D" alt="">
+                            </a>
+                            <p class="p">Shoes</p>
+                        </div>
+                        <div class="options-slide swiper-slide bag" (click)="filter('Suit')">
+                            <a  class="img-container1">
+                                <img src="https://images.unsplash.com/photo-1580657018950-c7f7d6a6d990?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHN1aXR8ZW58MHx8MHx8fDA%3D" alt="">
+                            </a>
+                            <p class="p">Suits</p>
+                        </div>
+                        <div class="options-slide swiper-slide" (click)="filter('Sunglasses')">
+                            <a  class="img-container1">
+                                <img src="https://images.unsplash.com/photo-1624545104844-0d342896e7a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdsYXNzZXMlMjBzdW58ZW58MHx8MHx8fDA%3D" alt="">
+                            </a>
+                            <p class="p">Sunglasses</p>
+                        </div> 
+                         <!-- <div class="options-slide swiper-slide">
+                            <div class="img-container">
+                                <img src="img/25/1.webp" alt="">
+                            </div>
+                            <p>shirt</p>
+                        </div>
+                        <div class="options-slide swiper-slide">
+                            <div class="img-container">
+                                <img src="img/22/1.webp" alt="">
+                            </div>
+                            <p>shirt</p>
+                        </div>
+                        <div class="options-slide swiper-slide">
+                            <div class="img-container">
+                                <img src="img/27/1.webp" alt="">
+                            </div>
+                            <p>shirt</p>
+                        </div>
+                        <div class="options-slide swiper-slide">
+                            <div class="img-container">
+                                <img src="img/14/1.webp" alt="">
+                            </div>
+                            <p>shirt</p>
+                        </div>
+                        <div class="options-slide swiper-slide">
+                            <div class="img-container">
+                                <img src="img/13/1.webp" alt="">
+                            </div>
+                            <p>shirt</p>
+                        </div>
+                        <div class="options-slide swiper-slide">
+                            <div class="img-container">
+                                <img src="img/23/1.webp" alt="">
+                            </div>
+                            <p>shirt</p>
+                        </div> --> 
+                    </div>
+                    <div class="swiper-button-next"><i class='bx bx-chevron-right'></i></div>
+                    <div class="swiper-button-prev"><i class='bx bx-chevron-left'></i></div>
+                </div>
+            </div>
+        </div>
+ <section class="products">
+  <div class="products-content">
+      <div class="suggestions">
+          <p id="Featured" class="sug active" (click)="suggitions('Featured')">Featured</p>
+          <p id="Popular" class="sug" (click)="suggitions('Popular')">Popular</p>
+          <p id="New-added" class="sug" (click)="suggitions('New-added')">New added</p>
+      </div>
+              <!-- loading  -->
+              <div class="loading-card" data-loader="1" *ngIf="loading">
+                <div class="card-content">
+                    <div class="loader-1">
+                        <div class="pulse-container">
+                            <div class="pulse-circle"></div>
+                            <div class="pulse-circle"></div>
+                            <div class="pulse-circle"></div>
+                        </div>
+                        <div class="loader-text">Loading Content</div>
+                    </div>
+                </div>
+            </div>
+            <!-- loading  -->
+      <div *ngIf="!loading" class="group">
+            <div class="item" *ngFor="let item of filtercategory | filter: searchKey :'productName'">
+              <div class="img-container">
+                  <div class="date" [ngClass]="{
+                    'bg-binck': item.productDescription === 'new',
+                    'bg-oran': item.productDescription === 'Best Sell',
+                    'bg-sky': item.productDescription === 'Sale',
+                    'bg-darkgreen': item.productDescription === 'Hot'
+                  }">{{item.productDescription}}</div>
+                  <img [src]="item.productImageUrl" alt="">
+                  <div class="icons">
+                  <a  class="veiw" data-text="view" (click)="openBroductDetail(item.productId)"><i class='bx bx-show'></i></a>
+                  <a class="favorite" [attr.data-text]="IsWishlist(item) ? 'Remove From Favorite' : 'Add To Favorite'"  (click)="togglewhilist(item)" [ngClass]="{'active':IsWishlist(item)}" ><i class='bx bx-heart'></i></a>
+                  </div>
+              </div>
+              <p>{{item.categoryName}}</p>
+              <h2>{{item.productName}}</h2>
+              <div class="star-price-cart-container">
+              <div class="stars-price">
+              <div class="stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+              </div>
+              <p class="price"><span class="number" style="padding-right: 5px;">${{item.productPrice}}.00</span> <span class="delete">${{item.productPrice + (item.productPrice / 4)}}</span></p>
+          </div>
+          <div class="cart" data-text="add to cart" (click)="toggleAddToCart(item)" [ngClass]="{'active':IsAddedToCart(item)}" [attr.data-text]="IsAddedToCart(item) ? 'Remove From Cart' : 'Add To Cart'" >
+              <i class='bx bx-shopping-bag'></i>
+          </div>
+          </div>
+          </div>
+      </div>
+      <!-- <button (click)="viewMore()" class="view-more-btn" [ngClass]="isviewed ? 'viewed' : '' "> -->
+        <div class="viewed" (click)="viewMore()" [ngClass]="isviewed ? 'viewedbtn' : '' "><a> View More </a></div>
+        
+      
+  </div>
+</section>
+    <!-- start offers -->
+    <section class="section-offers">
+        <div class="offers-content">
+            <h2>New <span>offers</span></h2>
+            <div class="offers">
+                <div class="item item-offer">
+                    <h2>Deal of the Day</h2>
+                    <p class="limited">limited quantities</p>
+                    <h3>Summer Collection New Modern Design</h3>
+                    <p class="price">$139.00 <span> $160.99</span></p>
+                    <p class="warning">Hurry Up! Offer End in:</p>
+                    <div class="timing">
+                    <div class="time ">
+                        <div class="number day">{{ day }}</div>
+                        <p class="name">day</p>
+                    </div>
+                    <span>:</span>
+                    <div class=" time">
+                        <div class="number hour">{{ hour }}</div>
+                        <p class="name">hour</p>
+                    </div>
+                    <span>:</span>
+                    <div class="time ">
+                        <div class="number minute">{{ minute }}</div>
+                        <p class="name">mins</p>
+                    </div>
+                    <span>:</span>
+                    <div class="time ">
+                        <div class="number seconds">{{ second }}</div>
+                        <p class="name">Sec</p>
+                    </div>
+                    </div>
+                    <div class="btn-special"><a>Shop Now</a></div>
+                    <div class="img-container">
+                        <!-- <img src="img/16/2.webp" alt=""> -->
+                    </div>
+                </div>
+                <div class="item item-offer">
+                    <h2>Deal of the Day</h2>
+                    <p class="limited">limited quantities</p>
+                    <h3>Summer Collection New Modern Design</h3>
+                    <p class="price">$139.00 <span> $160.99</span></p>
+                    <p class="warning">Hurry Up! Offer End in:</p>
+                    <div class="timing">
+                    <div class="time ">
+                        <div class="number day">2</div>
+                        <p class="name">day</p>
+                    </div>
+                    <span>:</span>
+                    <div class=" time">
+                        <div class="number hour">03</div>
+                        <p class="name">hour</p>
+                    </div>
+                    <span>:</span>
+                    <div class="time ">
+                        <div class="number minute">22</div>
+                        <p class="name">mins</p>
+                    </div>
+                    <span>:</span>
+                    <div class="time ">
+                        <div class="number seconds">45</div>
+                        <p class="name">Sec</p>
+                    </div>
+                    </div>
+                    <div class=" btn-special "><a href="">Shop Now</a></div>
+                    <div class="img-container">
+                        <!-- <img src="img/16/2.webp" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end offers -->
+    <!-- start arrivals -->
+    <section class="new-arrivals">
+        <div class="arrival-content">
+            <h2 class="heading"><span>New</span> Arrivals</h2>
+            <div class="arrival-swiper mutual swiper">
+                <div class="arrival-wrepper swiper-wrapper">
+                    <div class="arrival-slid swiper-slide item " *ngFor="let item of SwiperItems">
+                        <div class="img-container">
+                            <div class="date" [ngClass]="{
+                                'bg-binck': item.productDescription === 'new',
+                                'bg-oran': item.productDescription === 'Best Sell',
+                                'bg-sky': item.productDescription === 'Sale',
+                                'bg-darkgreen': item.productDescription === 'Hot'
+                              }">{{item.productDescription}}</div>
+                            <img [src]="item.productImageUrl" alt="">
+                            <div class="icons">
+                                <a  class="veiw" data-text="view" (click)="openBroductDetail(item.productId)"><i class='bx bx-show'></i></a>
+                            <a class="favorite" [attr.data-text]="IsWishlist(item) ? 'Remove From Favorite' : 'Add To Favorite'"  (click)="togglewhilist(item)" [ngClass]="{'active':IsWishlist(item)}" ><i class='bx bx-heart'></i></a>
+                            <!-- <a class="compare" data-text="compare"><i class='bx bx-git-compare'></i></a> -->
+                            </div>
+                        </div>
+                        <p>{{item.categoryName}}</p>
+                        <h2>{{item.productName}}</h2>
+                        <div class="star-price-cart-container">
+                        <div class="stars-price">
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <p class="price"><span class="number">${{item.productPrice}} </span> <span class="delete">${{item.productPrice + (item.productPrice / 4)}}</span></p>
+                    </div>
+                    <div class="cart" data-text="add to cart" (click)="toggleAddToCart(item)" [ngClass]="{'active':IsAddedToCart(item)}" [attr.data-text]="IsAddedToCart(item) ? 'Remove From Cart' : 'Add To Cart'" >
+                        <i class='bx bx-shopping-bag'></i>
+                    </div>
+                    </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"><i class='bx bx-chevron-right'></i></div>
+                <div class="swiper-button-prev"><i class='bx bx-chevron-left'></i></div>
+            </div>
+        </div>
+    </section>
+    <!-- end arrivals -->
+         <!-- start other-options -->
+    <section class="other-options">
+        <div class="other-options-content">
+            <div class="kind-product">
+                <h3>Hot Releases</h3>
+                <div class="products2" *ngFor="let item of Releases">
+                    <div class="img-info">
+                        <div class="img"><img [src]="item.productImageUrl" alt=""></div>
+                        <div class="info">
+                            <p class="name">{{item.productName}}</p>
+                            <p class="price">${{item.productPrice}}<span>${{item.productPrice + (item.productPrice / 4)}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kind-product">
+                <h3>Deals & Outlet</h3>
+                <div class="products2" *ngFor="let item of Deals">
+                    <div class="img-info">
+                        <div class="img"><img [src]="item.productImageUrl" alt=""></div>
+                        <div class="info">
+                            <p class="name">{{item.productName}}</p>
+                            <p class="price">${{item.productPrice}}<span>${{item.productPrice + (item.productPrice / 4)}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kind-product">
+                <h3>Top Selleing</h3>
+                <div class="products2" *ngFor="let item of Selleing">
+                    <div class="img-info">
+                        <div class="img"><img [src]="item.productImageUrl" alt=""></div>
+                        <div class="info">
+                            <p class="name">{{item.productName}}</p>
+                            <p class="price">${{item.productPrice}}<span>${{item.productPrice + (item.productPrice / 4)}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kind-product">
+                <h3>Trendy</h3>
+                <div class="products2" *ngFor="let item of Trendy">
+                    <div class="img-info">
+                        <div class="img"><img [src]="item.productImageUrl" alt=""></div>
+                        <div class="info">
+                            <p class="name">{{item.productName}}</p>
+                            <p class="price">${{item.productPrice }}<span> ${{ item.productPrice + (item.productPrice / 4)}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end other-options -->
+
+

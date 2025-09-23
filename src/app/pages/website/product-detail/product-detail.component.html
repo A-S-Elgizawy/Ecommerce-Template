@@ -1,0 +1,222 @@
+<div class="connection-home-shop">
+    <p>
+      Home<span><i class="bx bx-chevron-right"></i></span>shop<span
+        ><i class="bx bx-chevron-right"></i
+      ></span>
+      New fashion
+    </p>
+  </div>
+  <!-- end home >shop >img -->
+  <section class="display-img">
+    <div class="display-img-content" >
+      <div class="img-container" >
+        <div class="img-displayed"><img class="add-img" [src]="productdata.productImageUrl" alt="" /></div> 
+        <!-- <div class="similars">
+          <img  src="" alt="" class="img1 imgsim active " />
+          <img  src="" alt="" class="img2 imgsim " />
+          <img  src="" alt="" class="img3 imgsim" />
+          <img  src="" alt="" class="img4 imgsim " />
+        </div> -->
+      </div>
+      <div class="img-info">
+        <p class="name">{{productdata.productName}}</p>
+        <p class="brand">
+          Brand: <span class="brand-name">{{productdata.productName}}</span>
+        </p>
+        <p class="price">
+          <span class="number">${{productdata.productPrice}}</span>
+          <span class="delete">${{productdata.productPrice + (productdata.productPrice / 4)}}</span> 20% Off
+        </p>
+        <p class="supstarct">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
+          laudantium repudiandae dicta illum dignissimos. Similique tenetur
+          possimus qui nulla repellat corporis ex inventore totam debitis
+          doloribus. Mollitia consectetur expedita omnis!
+        </p>
+        <div class="benefits">
+          <i class="bx bx-crown"></i>
+          <p>1 Year Al Jazeera Brandy Warranty</p>
+        </div>
+        <div class="benefits">
+          <i class="bx bx-sync"></i>
+          <p>30 Day Return Policy</p>
+        </div>
+        <div class="benefits">
+          <i class="bx bx-credit-card"></i>
+          <p class="test">Cash on Delivery available</p>
+        </div>
+        <div class="color-container">
+          <p class="color-name">color</p>
+          <div class="colors">
+            <span class="col first"></span>
+            <span class="col second"></span>
+            <span class="col third"></span>
+            <span class="col fourth"></span>
+            <span class="col fifth"></span>
+          </div>
+        </div>
+        <div class="size-container">
+          <p class="size-name">Size</p>
+          <div class="sizes">
+            <p class="size active" #size>M</p>
+            <p class="size" #size>L</p>
+            <p class="size" #size>XL</p>
+            <p class="size" #size>XXL</p>
+          </div>
+        </div>
+        <div class="quantity-container">
+          <div class="btn" (click)="toggleAddToCart(productdata)" [ngClass]="{'active':IsAddedToCart(productdata)}" >Add to cart</div>
+          <div class="heart-icon" (click)="togglewhilist(productdata)" [ngClass]="{'active':IsWishlist(productdata)}">
+            <i class="bx bx-heart"></i>
+          </div>
+        </div>
+        <!-- <div class="other-data">
+          <p>SKU: FWM15VKT</p>
+          <p>Tags: Cloth, Women.Dress</p>
+          <p>Availability: 8 items in Stock</p>
+        </div> -->
+      </div>
+    </div>
+    <div class="additional-info">
+      <div class="additional-content">
+        <!-- <p class="choise additional active" id="additional">
+          Additional Info
+        </p> -->
+        <p class="choise reviewss active" id="reviews">
+          Reviews <span class="mumbers">(2)</span>
+        </p>
+      </div>
+    </div>
+    <div class="content-change">
+      <div class="additionl-info ">
+        <div class="dir right">
+          <p>stand up</p>
+          <p>folded (w/o wheels)</p>
+          <p>stand up</p>
+          <p>folded (w/o wheels)</p>
+          <p>stand up</p>
+          <p>folded (w/o wheels)</p>
+          <p>stand up</p>
+          <p>folded (w/o wheels)</p>
+          <p>stand up</p>
+          <p>folded (w/o wheels)</p>
+          <p>stand up</p>
+          <p>folded (w/o wheels)</p>
+        </div>
+        <div class="dir left">
+          <p>35"L*24"W*37-45:H(front to back wheel)</p>
+          <p>35"L*24"W*37-45:H</p>
+          <p>35"L*24"W*37-45:H(front to back wheel)</p>
+          <p>35"L*24"W*37-45:H</p>
+          <p>35"L*24"W*37-45:H(front to back wheel)</p>
+          <p>35"L*24"W*37-45:H</p>
+          <p>35"L*24"W*37-45:H(front to back wheel)</p>
+          <p>35"L*24"W*37-45:H</p>
+          <p>35"L*24"W*37-45:H(front to back wheel)</p>
+          <p>35"L*24"W*37-45:H</p>
+          <p>35"L*24"W*37-45:H(front to back wheel)</p>
+          <p>35"L*24"W*37-45:H</p>
+        </div>
+      </div>
+      <div class="reviews active">
+        <div class="reviews-content ">
+          <div class="opinions">
+            <div class="img-name">
+              <img src="https://automaster.ee/wp-content/uploads/2019/02/person6.jpg" alt="" />
+              <p>John</p>
+            </div>
+            <div class="comment-container">
+              <div class="stars">
+                <i class="bx bx-star"></i>
+                <i class="bx bx-star"></i>
+                <i class="bx bx-star"></i>
+                <i class="bx bx-star"></i>
+                <i class="bx bx-star"></i>
+              </div>
+              <p class="comment">
+                Thank you very fast shipping from plolan only 3days
+              </p>
+              <p class="date">December 4. 2022 at 3:12 pm</p>
+            </div>
+          </div>
+          <div class="opinions">
+            <div class="img-name">
+              <img src="https://ucmscdn.healthgrades.com/fe/a2/cf2a8cb1497bb5266b0c5332ff7d/558694-bradley-shepherd" alt="" />
+              <p>Dr. Bradley</p>
+            </div>
+            <div class="comment-container">
+              <div class="stars">
+                <i class="bx bx-star"></i>
+                <i class="bx bx-star"></i>
+                <i class="bx bx-star"></i>
+                <i class="bx bx-star"></i>
+                <i class="bx bx-star"></i>
+              </div>
+              <p class="comment">
+                Thank you very fast shipping from plolan only 3days
+              </p>
+              <p class="date">December 4. 2022 at 3:12 pm</p>
+            </div>
+          </div>
+        </div>
+        <div class="add-review">
+          <h2>Add a review</h2>
+          <div class="stars">
+            <i id="star1 " class="bx bx-star Allstars star1 active"></i>
+            <i id="star2 " class="bx bx-star Allstars star2"></i>
+            <i id="star3 " class="bx bx-star Allstars star3"></i>
+            <i id="star4 " class="bx bx-star Allstars star4"></i>
+            <i id="star5 " class="bx bx-star Allstars star5"></i>
+          </div>
+          <form action="">
+            <textarea name="" class="textarea" placeholder="Write Comment"></textarea>
+            <input class="input-name" type="text" placeholder="Name" />
+            <input class="input-email" type="email" placeholder="Email" />
+            <div class="btn add-opinion" (click)="addDynamicElements()">Submit review</div>
+          </form>
+        </div>
+      </div>
+      </div>
+      <section class="related-products">
+        <div class="related-content">
+          <h2 class="heading"><span>Related</span> Products</h2>
+       <div class="group">
+        <div class="item" *ngFor="let item of (productList | filter: productdata.productName :'productName') | slice: 0:4"  >
+          <div class="img-container">
+            <!-- for(let i = 0; i < productList.length; i++){} -->
+              <div class="date" [ngClass]="{
+                'bg-binck': item.productDescription === 'new',
+                'bg-oran': item.productDescription === 'Best Sell',
+                'bg-sky': item.productDescription === 'Sale',
+                'bg-darkgreen': item.productDescription === 'Hot'
+              }">{{item.productDescription}}</div>
+              <img [src]="item.productImageUrl" alt="">
+              <div class="icons">
+              <a  class="veiw" data-text="show" (click)="openBroductDetail(item.productId)" ><i class='bx bx-show'></i></a>
+              <a class="favorite" [attr.data-text]="IsWishlist(item) ? 'Remove From Favorite' : 'Add To Favorite'"  (click)="togglewhilist(item)" [ngClass]="{'active':IsWishlist(item)}" ><i class='bx bx-heart'></i></a>
+              </div>
+          </div>
+          <p>{{item.categoryName}}</p>
+          <h2>{{item.productName}}</h2>
+          <div class="star-price-cart-container">
+          <div class="stars-price">
+          <div class="stars">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+          </div>
+          <p class="price"><span class="number" style="padding-right: 5px;">${{item.productPrice}}.00</span> <span class="delete">$245.8</span></p>
+      </div>
+      <div class="cart" data-text="add to cart" (click)="toggleAddToCart(item)" [ngClass]="{'active':IsAddedToCart(item)}" [attr.data-text]="IsAddedToCart(item) ? 'Remove From Cart' : 'Add To Cart'" >
+          <i class='bx bx-shopping-bag'></i>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  
+    
+  </section>
