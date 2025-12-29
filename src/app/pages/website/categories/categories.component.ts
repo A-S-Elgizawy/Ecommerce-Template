@@ -16,15 +16,15 @@ export class CategoriesComponent {
   constructor(private activatedroute:ActivatedRoute,private productSrv:ProductService){
     this.activatedroute.params.subscribe((res:any)=>{
       this.productid=res.id
-      this.getAllproductbyid()
+      // this.getAllproductbyid()
     })
   }
 
-  getAllproductbyid(){
-    this.productSrv.getproductsbyid(this.productid).subscribe((res:any)=>{
-     this.productListbyid=res.data
-    })
-  }
+  // getAllproductbyid(){
+  //   this.productSrv.getproductsbyid(this.productid).subscribe((res:any)=>{
+  //    this.productListbyid=res.data
+  //   })
+  // }
 
 
 

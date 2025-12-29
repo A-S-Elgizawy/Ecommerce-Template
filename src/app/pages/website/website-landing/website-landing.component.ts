@@ -57,7 +57,7 @@ export class WebsiteLandingComponent implements OnInit ,AfterViewInit {
   ngOnInit(): void {
 
     this.activeHeader()
-    this.getAllcategory()
+    // this.getAllcategory()
     // this.loadcart()
     this.getfevoritproducts()
     this.getcartproducts()
@@ -81,11 +81,11 @@ if (bar) {
   //   htmlTag.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
   // }
   
-    getAllcategory(){
-      this.productSrv.getAllcategory().subscribe((res:any)=>{
-        this.categoryList=res.data
-       })
-    }
+    // getAllcategory(){
+    //   this.productSrv.getAllcategory().subscribe((res:any)=>{
+    //     this.categoryList=res.data
+    //    })
+    // }
     
     // loadcart(){
     //   this.productSrv.customarid(1).subscribe((res:any)=>{
@@ -123,24 +123,23 @@ if (bar) {
         }
       })
     })
-    // if (smallscreen) {
-    //   smallscreen.classList.remove("active", window.scrollY);
-    // }
+
     window.addEventListener("scroll",()=>{
       if (smallscreen) {
         smallscreen.classList.remove("active");
       }
     })
-    if (smallscreen) {
-    smallscreen.addEventListener("click", (event) => {
-      if (event.target !== smallscreen) {
-        if (smallscreen) {
-          smallscreen.classList.remove("active");
-    }
-      }
+
+  //   if (smallscreen) {
+  //   smallscreen.addEventListener("click", (event) => {
+  //     if (event.target !== smallscreen) {
+  //       if (smallscreen) {
+  //         smallscreen.classList.remove("active");
+  //   }
+  //     }
     
-    });
-  }
+  //   });
+  // }
     // console.log("Scroll Position:", window.scrollY);
     
   }

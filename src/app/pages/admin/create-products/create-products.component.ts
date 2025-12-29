@@ -47,14 +47,14 @@ export class CreateProductsComponent {
 
   ngOnInit(): void {  
     this.getAllproducts();
-    this.getAllcategory()
+    // this.getAllcategory()
    }
 
-   getAllcategory(){
-    this.productSrv.getAllcategory().subscribe((res:any)=>{
-     this.categoryList=res.data
-    })
-  }
+  //  getAllcategory(){
+  //   this.productSrv.getAllcategory().subscribe((res:any)=>{
+  //    this.categoryList=res.data
+  //   })
+  // }
 
 
   getAllproducts(){ 
@@ -63,17 +63,17 @@ export class CreateProductsComponent {
     })
   };
 
-  onupdate() {
-    console.log('Payload being sent:', this.productObj); // Debugging
-    this.productSrv.updateproduct(this.productObj).subscribe((res: any) => {
-      if (res.result) {
-        alert('Product updated');
-        this.getAllproducts(); // Refresh the product list
-      } else {
-        alert(res.message);
-      }
-    });
-  }
+  // onupdate() {
+  //   console.log('Payload being sent:', this.productObj); // Debugging
+  //   this.productSrv.updateproduct(this.productObj).subscribe((res: any) => {
+  //     if (res.result) {
+  //       alert('Product updated');
+  //       this.getAllproducts(); 
+  //     } else {
+  //       alert(res.message);
+  //     }
+  //   });
+  // }
 
   // onupdate(){
   //   this.productSrv.updateproduct(this.productObj).subscribe((res:any)=>{
@@ -86,18 +86,16 @@ export class CreateProductsComponent {
   //   })
   // }
 
-  onSave(){
-    this.productSrv.saveproduct(this.productObj).subscribe((res:any)=>{
-      debugger;
-      if(res.result){
-        // alert("product created");
-        this.getAllproducts();
-        // this.getAllproductstempo();
-      }else{
-        alert(res.message)
-      }
-    })
-  }
+  // onSave(){
+  //   this.productSrv.saveproduct(this.productObj).subscribe((res:any)=>{
+  //     debugger;
+  //     if(res.result){
+  //       this.getAllproducts();
+  //     }else{
+  //       alert(res.message)
+  //     }
+  //   })
+  // }
 
 
   onIdit(item:any){
@@ -105,20 +103,19 @@ export class CreateProductsComponent {
     this.opensidepanal()
   }
 
-  ondelete(item: any){
-    const isdelete = confirm("are you sure");
-    if(isdelete){
-      this.productSrv.deleteproduct(item.productId).subscribe((res:any)=>{
-        if(res.result){
-          alert("product deleted");
-          this.getAllproducts();
-          // this.getAllproductstempo();
-        }else{
-          alert(res.message)
-        }
-      })
-    }
-  }
+  // ondelete(item: any){
+  //   const isdelete = confirm("are you sure");
+  //   if(isdelete){
+  //     this.productSrv.deleteproduct(item.productId).subscribe((res:any)=>{
+  //       if(res.result){
+  //         alert("product deleted");
+  //         this.getAllproducts();
+  //       }else{
+  //         alert(res.message)
+  //       }
+  //     })
+  //   }
+  // }
 
 
 }

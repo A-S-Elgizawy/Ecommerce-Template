@@ -104,15 +104,15 @@ isviewed:boolean=true
    getproducts(){
     this.loading = true;
     this.productSrv.getAllproducts().subscribe((res:any)=>{
-    this.productList=res.data
+    this.productList=res
     this.filtercategory=this.productList.slice(0,16); 
     // this.SwiperItems=this.productList.slice(66,75);
     this.SwiperItems=this.productList.slice(0);
 
-    this.Deals=this.productList.slice(32,36);
-    this.Selleing=this.productList.slice(55,59);
-    this.Trendy=this.productList.slice(69,73);
-    this.Releases=this.productList.slice(102,106);
+    this.Deals=this.productList.slice(0,4);
+    this.Selleing=this.productList.slice(17,21);
+    this.Trendy=this.productList.slice(24,28);
+    this.Releases=this.productList.slice(33,37);
     setTimeout(() => {
       this.initializeSwiper();
     }, 0);

@@ -50,18 +50,20 @@
                       <p class="cost">${{total}}</p>
                   </div>
                   <h2>Payment</h2>
+                  <form action="">
                   <div class="options">
-                  <input class="check" type="checkbox">
-                  <label for="">Direct Bank Transfer</label>
+                  <input class="check" name="chooseone" type="radio" id="choose">
+                  <label for="choose">Direct Bank Transfer</label>
                   </div>
                   <div class="options brack">
-                  <input class="check" type="checkbox">
-                  <label for="">Check payment</label>
+                  <input class="check" name="chooseone" type="radio" id="choose2">
+                  <label for="choose2">Check payment</label>
                   </div>
                   <div class="options">
-                  <input class="check" type="checkbox">
-                  <label for="">paypal</label>
+                  <input class="check" name="chooseone" type="radio" id="choose3">
+                  <label for="choose3">paypal</label>
                   </div>
+                  </form>
                   <!-- <div class="btn"  (click)="onSubmit()" [disabled]="this.myform.invalid"><a > Place Order</a></div> -->
               </div>
           </div>

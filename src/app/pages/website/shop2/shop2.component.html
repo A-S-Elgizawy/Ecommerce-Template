@@ -29,7 +29,7 @@
                   }">{{item.productDescription}}</div>
                   <img [src]="item.productImageUrl" alt="">
                   <div class="icons">
-                  <a  class="veiw" data-text="show" (click)="openBroductDetail(item.productId)"><i class='bx bx-show'></i></a>
+                  <a  class="veiw" data-text="show" (click)="openBroductDetail(item.id)"><i class='bx bx-show'></i></a>
                   <a class="favorite" [attr.data-text]="IsWishlist(item) ? 'Remove From Favorite' : 'Add To Favorite'"  (click)="togglewhilist(item)" [ngClass]="{'active':IsWishlist(item)}" ><i class='bx bx-heart'></i></a>
                   </div>
               </div>

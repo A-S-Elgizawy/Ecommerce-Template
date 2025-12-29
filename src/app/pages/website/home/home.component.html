@@ -204,7 +204,7 @@
                   }">{{item.productDescription}}</div>
                   <img [src]="item.productImageUrl" alt="">
                   <div class="icons">
-                  <a  class="veiw" data-text="view" (click)="openBroductDetail(item.productId)"><i class='bx bx-show'></i></a>
+                  <a  class="veiw" data-text="view" (click)="openBroductDetail(item.id)"><i class='bx bx-show'></i></a>
                   <a class="favorite" [attr.data-text]="IsWishlist(item) ? 'Remove From Favorite' : 'Add To Favorite'"  (click)="togglewhilist(item)" [ngClass]="{'active':IsWishlist(item)}" ><i class='bx bx-heart'></i></a>
                   </div>
               </div>
@@ -318,11 +318,11 @@
                                 'bg-binck': item.productDescription === 'new',
                                 'bg-oran': item.productDescription === 'Best Sell',
                                 'bg-sky': item.productDescription === 'Sale',
-                                'bg-darkgreen': item.productDescription === 'Hot'
+                                'bg-darkgreen': item.productDescription === 'Hot' 
                               }">{{item.productDescription}}</div>
                             <img [src]="item.productImageUrl" alt="">
                             <div class="icons">
-                                <a  class="veiw" data-text="view" (click)="openBroductDetail(item.productId)"><i class='bx bx-show'></i></a>
+                                <a  class="veiw" data-text="view" (click)="openBroductDetail(item.id)"><i class='bx bx-show'></i></a>
                             <a class="favorite" [attr.data-text]="IsWishlist(item) ? 'Remove From Favorite' : 'Add To Favorite'"  (click)="togglewhilist(item)" [ngClass]="{'active':IsWishlist(item)}" ><i class='bx bx-heart'></i></a>
                             <!-- <a class="compare" data-text="compare"><i class='bx bx-git-compare'></i></a> -->
                             </div>

@@ -35,7 +35,7 @@ export class ProductDetailComponent implements OnInit , AfterViewInit{
 filtercategory: any[] = []; 
 getproducts(){
   this.productSrv.getAllproducts().subscribe((res:any)=>{
-  this.productList=res.data
+  this.productList=res
   // this.filtercategory=this.productList.slice(0,4);
   })
  }
@@ -56,9 +56,9 @@ openBroductDetail(id: number){
 }
   getproductId(){
     const productid = this.activatedroute.snapshot.paramMap.get('id')
-    console.log(productid);
        productid && this.productSrv.getproductbyid(Number(productid)).subscribe((res:any)=>{
-       this.productdata = res.data 
+         this.productdata = res
+         console.log(this.productdata);
    })
 }
 

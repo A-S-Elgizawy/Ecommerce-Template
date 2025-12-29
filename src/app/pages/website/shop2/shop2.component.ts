@@ -25,7 +25,7 @@ export class Shop2Component {
   getproducts(){
     this.loading = true;
     this.productSrv.getAllproducts().subscribe((res:any)=>{
-    this.productList=res.data
+    this.productList=res
     // this.filtercategory=this.productList.slice(0,15);
     this.loading = false;
     })

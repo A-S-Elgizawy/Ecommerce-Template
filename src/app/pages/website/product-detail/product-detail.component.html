@@ -79,9 +79,9 @@
     </div>
     <div class="additional-info">
       <div class="additional-content">
-        <!-- <p class="choise additional active" id="additional">
+        <p class="choise additional active" id="additional">
           Additional Info
-        </p> -->
+        </p>
         <p class="choise reviewss active" id="reviews">
           Reviews <span class="mumbers">(2)</span>
         </p>
@@ -122,7 +122,7 @@
         <div class="reviews-content ">
           <div class="opinions">
             <div class="img-name">
-              <img src="https://automaster.ee/wp-content/uploads/2019/02/person6.jpg" alt="" />
+              <img src="https://media.istockphoto.com/id/1388648617/photo/confident-caucasian-young-man-in-casual-denim-clothes-with-arms-crossed-looking-at-camera.jpg?s=612x612&w=0&k=20&c=YxctPklAOJMmy6Tolyvn45rJL3puk5RlKt39FO46ZeA=" alt="" />
               <p>John</p>
             </div>
             <div class="comment-container">
@@ -177,7 +177,7 @@
         </div>
       </div>
       </div>
-      <section class="related-products">
+      <section class="related-products"> 
         <div class="related-content">
           <h2 class="heading"><span>Related</span> Products</h2>
        <div class="group">
@@ -192,7 +192,7 @@
               }">{{item.productDescription}}</div>
               <img [src]="item.productImageUrl" alt="">
               <div class="icons">
-              <a  class="veiw" data-text="show" (click)="openBroductDetail(item.productId)" ><i class='bx bx-show'></i></a>
+              <a  class="veiw" data-text="show" (click)="openBroductDetail(item.id)" ><i class='bx bx-show'></i></a>
               <a class="favorite" [attr.data-text]="IsWishlist(item) ? 'Remove From Favorite' : 'Add To Favorite'"  (click)="togglewhilist(item)" [ngClass]="{'active':IsWishlist(item)}" ><i class='bx bx-heart'></i></a>
               </div>
           </div>

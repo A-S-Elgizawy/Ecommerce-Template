@@ -18,20 +18,20 @@ export class CreateCategoryComponent {
 
   constructor(private categoryService: ProductService) {}
 
-  onCreateCategory() {
-    this.categoryService.createCategory(this.categoryObj).subscribe(
-      (res: any) => {
-        if (res.result) {
-          alert('Category created successfully!');
-          this.categoryObj = { categoryName: ''}; // Reset the form
-        } else {
-          alert('Failed to create category: ' + res.message);
-        }
-      },
-      (error) => {
-        console.error('Error:', error);
-        alert('An error occurred while creating the category.');
-      }
-    );
-  }
+  // onCreateCategory() {
+  //   this.categoryService.createCategory(this.categoryObj).subscribe(
+  //     (res: any) => {
+  //       if (res.result) {
+  //         alert('Category created successfully!');
+  //         this.categoryObj = { categoryName: ''}; 
+  //       } else {
+  //         alert('Failed to create category: ' + res.message);
+  //       }
+  //     },
+  //     (error) => {
+  //       console.error('Error:', error);
+  //       alert('An error occurred while creating the category.');
+  //     }
+  //   );
+  // }
 }

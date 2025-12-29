@@ -1,8 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import {  Injectable } from '@angular/core';
-import { Constant } from './constant/constant';
+// import { Constant } from './constant/constant';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
+// json-server --watch D:\Others\Ahmed\angularecommerce\ecommerceapp\public\db.json --port 3000
+
+interface products{
+  id:number,
+  productName:string,
+  categoryName:string,
+  productPrice:number,
+  productDescription:string,
+  productImageUrl:string,
+}
+interface productsItem {
+  product:products[]
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -17,44 +30,50 @@ export class ProductService {
   public cartaddsubject = new Subject<boolean>();
   public favoritsubject = new Subject<boolean>();
 
+    private Savedproduct = ''
 
-  // getAllproducts():Observable<any[]>{
-  //   return  this.http.get<any[]>('/api/amazon/GetAllProducts')
+
+
+
+  private api = 'http://localhost:3000/products'
+
+  // createCategory(category: any): Observable<any> {
+  //   // return this.http.post(`${Constant.API_END_POINT}${Constant.CHILDREN.CREATE_CATEGORY}`, category);
   // }
-  createCategory(category: any): Observable<any> {
-    return this.http.post(`${Constant.API_END_POINT}${Constant.CHILDREN.CREATE_CATEGORY}`, category);
-  }
   getAllproducts(){
-    return  this.http.get(Constant.API_END_POINT+Constant.CHILDREN.GET_PRODUCTS)
+    // return  this.http.get(Constant.API_END_POINT+Constant.CHILDREN.GET_PRODUCTS)
+    return this.http.get<productsItem[]>(this.api)
   }
-  getAllcategory(){
-    return  this.http.get(Constant.API_END_POINT+Constant.CHILDREN.GET_CATEGORY)
+    getproductbyid(id:number):Observable<products>{
+    return this.http.get<products>(`${this.api}/${id}`)
   }
-  getproductsbyid(id:number){
-    return  this.http.get(Constant.API_END_POINT+Constant.CHILDREN.GET_CATEGORYBYID + id)
-  }
-  addtocart(obj:any){
-    return  this.http.post(Constant.API_END_POINT+Constant.CHILDREN.ADD_TOCART,obj)
-  }
+  // getAllcategory(){
+  //   // return  this.http.get(Constant.API_END_POINT+Constant.CHILDREN.GET_CATEGORY)
+  // }
+  // getproductsbyid(id:number){
+  //   // return  this.http.get(Constant.API_END_POINT+Constant.CHILDREN.GET_CATEGORYBYID + id)
+  //   return this.http.get<products>(`${this.api}/${id}`)
+  // }
+  // addtocart(obj:any){
+  //   // return  this.http.post(Constant.API_END_POINT+Constant.CHILDREN.ADD_TOCART,obj)
+  // }
   // customarid(custid:number){
   //   return  this.http.get(Constant.API_END_POINT+Constant.CHILDREN.CUSTMID + custid)
   // }
-  // deleteproductid(cartid:number):Observable<any[]>{
+  // deleteid(cartid:number):Observable<any[]>{
   //   return  this.http.get<any[]>('/api/amazon/DeleteProductFromCartById?id=' + cartid)
   // }
-  // getproductbyid(productid:number):Observable<any>{
-  //   return  this.http.get<any>('/api/amazon/GetProductById?id=' + productid)
+  // getproductbyid(id:number):Observable<any>{
+  //   return  this.http.get<any>('/api/amazon/GetProductById?id=' + id)
   // }
-  getproductbyid(proid:number){
-    return  this.http.get(Constant.API_END_POINT+Constant.CHILDREN.GET_PRODUCTID+proid)
-  }
+
 
   // makesale(obj:any):Observable<any>{
   //   return  this.http.post<any>('/api/amazon/AddNewSale',obj)  this is for make sale 
   // }
   wishListItem:any[]=[] 
   IsWishlist(product:any):boolean{
-    return this.wishListItem.some(item => item.productId === product.productId)
+    return this.wishListItem.some(item => item.id === product.id)
   }
 
   additemtowsihlist(product:any):void{
@@ -63,7 +82,7 @@ export class ProductService {
   }
 
   removeitemfromwsihlist(product:any):void{
-    const index=this.wishListItem.findIndex(item => item.productId == product.productId)
+    const index=this.wishListItem.findIndex(item => item.id == product.id)
     if(index !== -1){
       this.wishListItem.splice(index,1)
       // alert('item remove from the favorit')
@@ -72,7 +91,7 @@ export class ProductService {
 
   cartitems:any[]=[]
   IsAddedToCart(product:any):boolean{
-    return this.cartitems.some(item => item.productId === product.productId)
+    return this.cartitems.some(item => item.id === product.id)
   }
 
   AddToCart(product:any):void{
@@ -80,7 +99,7 @@ export class ProductService {
   }
 
   RemoveFromCart(product:any):void{
-    const index = this.cartitems.findIndex(item => item.productId == product.productId)
+    const index = this.cartitems.findIndex(item => item.id == product.id)
     if(index !== -1){
       this.cartitems.splice(index,1)
     }
@@ -89,15 +108,15 @@ export class ProductService {
 // create products ==========================================
 
 saveproduct(obj:any){
-  return this.http.post(Constant.API_END_POINT+Constant.CHILDREN.CREATE_PRODUCT, obj);
+  // return this.http.post(Constant.API_END_POINT+Constant.CHILDREN.CREATE_PRODUCT, obj);
 }
 
 updateproduct(obj:any){
-  return this.http.post(Constant.API_END_POINT+Constant.CHILDREN.UPDATE_PRODUCT, obj);
+  // return this.http.post(Constant.API_END_POINT+Constant.CHILDREN.UPDATE_PRODUCT, obj);
 }
 
 deleteproduct(id:any){
-  return this.http.get(Constant.API_END_POINT+Constant.CHILDREN.DELETE_PRODUCT + id);
+  // return this.http.get(Constant.API_END_POINT+Constant.CHILDREN.DELETE_PRODUCT + id);
 }
 // create products ==========================================
 
@@ -144,8 +163,8 @@ clearCart(): void {
 }
 // clearCart
 
-updateQuantity(productId: number, quantity: number): void {
-  const product = this.cartitems.find(item => item.id === productId);
+updateQuantity(id: number, quantity: number): void {
+  const product = this.cartitems.find(item => item.id === id);
   if (product) {
     product.quantity = quantity;
   }
